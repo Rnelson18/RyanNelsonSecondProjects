@@ -7,8 +7,19 @@ public class Order {
 
     private ArrayList<Order> Customer;
 
-    public String getDestination;
-    public String getOrderer;
+    public String Destination;
+
+    public String Orderer;
+
+    public String getDestination() {
+        return Destination;
+    }
+
+    public String getOrderer(){
+        return Orderer;
+    }
+
+
 
 
 }

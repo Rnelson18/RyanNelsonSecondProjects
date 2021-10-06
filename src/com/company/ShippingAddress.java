@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.zip.Adler32;
 
 public class ShippingAddress {
 
@@ -15,12 +13,24 @@ public class ShippingAddress {
 
         private String PostalCode;
 
-        public ShippingAddress() {
-                String[] programList = {"line1", "line2", "cityName", "stateName", "zipCode"};
+        public ShippingAddress(String line1, String line2, String cityName, String stateName, String zipCode) {
+           AddressLine1 = line1;
+           AddressLine1 = line2;
+           city = cityName;
+           state = stateName;
+           PostalCode = zipCode;
 
+
+        }
+
+    public ShippingAddress() {
+
+    }
+
+    public String toString(){
                 var finals = AddressLine1 + "\n" + AddressLine2 + "\n" + city + "\n" + state
                         + "\n" + PostalCode;
-
+                return finals;
         }
 
         public void remove(ShippingAddress customer) {
@@ -29,6 +39,7 @@ public class ShippingAddress {
         public void deposit(double initialDeposit) {
         }
 
-        public int getAccountID() {
+        public void getAccountID() {
         }
+
 }

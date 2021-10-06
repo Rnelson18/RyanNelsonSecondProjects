@@ -46,6 +46,7 @@ public class Main {
         }}
 
     private Optional<com.company.Customer> findCustomer(Scanner menu) {
+        return null;
     }
 
 
@@ -57,43 +58,28 @@ public class Main {
                     case 1:
                         System.exit(0);
                     case 2:
-                        addAddress(menu);
+                        System.out.println("Enter the first address");
+                        var line1 = menu.nextLine();
+                        System.out.println("Enter the second address");
+                        var line2 = menu.nextLine();
+                        System.out.println("Enter the city");
+                        var cityName= menu.nextLine();
+                        System.out.println("Enter the state");
+                        var stateName= menu.nextLine();
+                        System.out.println("Enter the zipcode");
+                        var zipCode = menu.nextLine();
+                        var newShippingAddress = new ShippingAddress(line1,line2,cityName,stateName,zipCode);
+
+                        newCustomer.addAddress(newShippingAddress);
                         break;
                 }
-                private void customerMenu() {
-                    System.out.println("======================================");
-                    System.out.println("What do you want to do with this Customer?");
-                    System.out.println("     [1] Enter Name");
-                    System.out.println("     [2] Enter Customer IDt");
-                    System.out.println("     [3] Return to Main menu");
-                    System.out.println("======================================");
-                    System.out.println(" Enter choice: ");
-                } private Optional<Customer> selectCustomer(Scanner){
-                    System.out.println("Customer Id of customer to select: ");
-                Random reader;
-                var idfind = reader.nextInt();{
-                    for (var currentCustomer : allCustomers) 
-                        if (currentCustomer.getCustomerID() == idfind)
-                            return Optional.of(newCustomer);
-                    }
-                    return Optional.empty();
                 }
-                private void addCustomer(Scanner menu) {
-
-                }
-                private void printMenu(){
-                    System.out.println("===================================================");
-                    System.out.println("what would you like to do next (select the number):");
-                    System.out.println("     [1] Exit the program");
-                    System.out.println("     [2] Add a customer");
-                    System.out.println("     [3] Select customer by ID");
-                    System.out.println("     [4] Enter the product");
-                    System.out.println("===================================================");
-                    System.out.println("Enter choice:");
 
                 }
 
-            }
-        }
+                }
+
+
+
 
 
